@@ -1,0 +1,55 @@
+git初始化配置
+git config --global user.name " "  //git 配置用户名称
+git config --global user.email " " //git 配置用户邮箱
+
+git创建仓库，初始化仓库
+
+创建一个目录当做git仓库
+git init //初始化git仓库
+
+
+git 本地仓库
+	工作区			暂存区				本地库
+		git add 		   git commit -m ""
+	
+	git status         查看git提交状态
+	git add	           将工作区文件加到暂存区
+	git commit         将暂存区文件提交到本地库
+		-m         添加提交的信息
+        git reflog         查看git日志
+	git reset          git版本回滚
+		--hard	   回滚到指定的版本
+	git diff	   查看git本地库与工作区的差异	
+	git branch         创建git分支
+		-v         查看git分支
+	git checkout	   切换git分支
+	git merge	   合并分支
+
+	git本地仓库解决冲突：
+		1.如果两个文件出现了冲突，先人为的解决冲突
+		2.人为解决冲突之后，再将文件提交到仓库即可
+
+	问题汇总：
+		1.git commit -m  必须要有提交的信息
+		2.git merge 合并的时候 要切换到需要合并到的一个分支
+		3.git diff 后面不接文件名，会比较分支的所有文件差异
+
+
+git 远程仓库（github）
+	本地库				远程库
+		-----git push------>>>
+		<<<--git pull---------
+
+	git push 			将本地库的内容推送到远程库
+	git pull			将远程库的内容拉取并合并到本地库  
+		git fetch 		抓取
+		git merge 		合并
+		git pull 		相当于 git fetch 和 git merge两个的集合
+	git remote			查看远程分支
+		-v
+		add 别名 远程地址	给远程仓库在本地添加别名
+	
+
+
+
+
